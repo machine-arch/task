@@ -1,0 +1,241 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "admin",
+      "lastName": "admin",
+      "agency": "admin",
+      "position": "superAdmin",
+      "email": "superadmin@gmail.com",
+      "phone": "123456789",
+      "password": "123456789",
+      "role": 1
+    }
+  ],
+  "roles": [
+    {
+      "id": 1,
+      "name": "administrator",
+      "description": "main",
+      "permissions": {
+        "users": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "tabs": [
+          1,
+          2,
+          3
+        ],
+        "roles": [
+          1,
+          2,
+          3
+        ]
+      }
+    },
+    {
+      "name": "moderator",
+      "description": "moderator",
+      "permissions": {
+        "users": [
+          1,
+          2
+        ],
+        "tabs": [
+          1,
+          2,
+          3
+        ]
+      },
+      "updatedAt": "2024-01-08T16:13:42.801Z",
+      "id": 2
+    },
+    {
+      "id": 3,
+      "name": "user",
+      "description": "user",
+      "permissions": {
+        "users": [],
+        "tabs": [
+          2
+        ],
+        "roles": []
+      }
+    }
+  ],
+  "permissions": {
+    "users": [
+      {
+        "id": 1,
+        "key": "add",
+        "name": "მომხმარებლის დამატება"
+      },
+      {
+        "id": 2,
+        "key": "delete",
+        "name": "მომხმარებლის წაშლა"
+      },
+      {
+        "id": 3,
+        "key": "update",
+        "name": "მომხმარებლის რედაქტირება"
+      },
+      {
+        "id": 4,
+        "key": "read only",
+        "name": "მხოლოდ დათვალიერება"
+      }
+    ],
+    "tabs": [
+      {
+        "id": 1,
+        "key": "add",
+        "name": "ჩანართის დამატება"
+      },
+      {
+        "id": 2,
+        "key": "add_archive",
+        "name": "ჩანართის არქივის დამატება"
+      },
+      {
+        "id": 3,
+        "key": "edit",
+        "name": "ჩანართის რედაქტირება"
+      },
+      {
+        "id": 4,
+        "key": "delete",
+        "name": "ჩანართის წაშლა"
+      },
+      {
+        "id": 5,
+        "key": "read only",
+        "name": "ჩანართის დათვალიერება"
+      }
+    ],
+    "roles": [
+      {
+        "id": 1,
+        "key": "add",
+        "name": "როლის დამატება"
+      },
+      {
+        "id": 2,
+        "key": "update",
+        "name": "როლის რედაქტირება"
+      },
+      {
+        "id": 3,
+        "key": "delete",
+        "name": "როლის წაშლა"
+      },
+      {
+        "id": 4,
+        "key": "read only",
+        "name": "დათვალიერება"
+      }
+    ]
+  },
+  "tabs": [
+    {
+      "name": "test11122",
+      "name_eng": "",
+      "name_code": "dsds",
+      "is_active": "false",
+      "document_level_id": 1,
+      "updatedAt": "2024-01-08T16:13:23.082Z",
+      "id": 1
+    },
+    {
+      "name": "test3",
+      "name_eng": "",
+      "name_code": "dsds",
+      "is_archive": "false",
+      "document_level_id": 4,
+      "valide_period": "2023-08-29 - 2023-08-30",
+      "confirm_date": "2023-08-29",
+      "createdAt": "2024-01-08T14:19:59.139Z",
+      "updatedAt": "2024-01-08T14:19:59.139Z",
+      "id": 2
+    },
+    {
+      "name": "test3",
+      "name_eng": "",
+      "name_code": "dsds",
+      "is_archive": "false",
+      "document_level_id": 4,
+      "valide_period": "2023-08-29 - 2023-08-30",
+      "confirm_date": "2023-08-29",
+      "createdAt": "2024-01-08T16:13:28.177Z",
+      "updatedAt": "2024-01-08T16:13:28.177Z",
+      "id": 3
+    },
+    {
+      "name": "test3",
+      "name_eng": "",
+      "is_archive": "false",
+      "document_level_id": 4,
+      "valide_period": "2023-08-29 - 2023-08-30",
+      "confirm_date": "2023-08-29",
+      "createdAt": "2024-01-08T16:43:29.479Z",
+      "updatedAt": "2024-01-08T16:43:29.479Z",
+      "name_code": "test3",
+      "id": 4
+    },
+    {
+      "name": "test3",
+      "name_eng": "",
+      "is_archive": "false",
+      "document_level_id": 4,
+      "valide_period": "2023-08-29 - 2023-08-30",
+      "confirm_date": "2023-08-29",
+      "createdAt": "2024-01-08T16:45:30.553Z",
+      "updatedAt": "2024-01-08T16:45:30.553Z",
+      "name_code": "aHjMcSAagc",
+      "id": 5
+    },
+    {
+      "name": "test3",
+      "name_eng": "",
+      "is_archive": "false",
+      "document_level_id": 4,
+      "valide_period": "2023-08-29 - 2023-08-30",
+      "confirm_date": "2023-08-29",
+      "createdAt": "2024-01-08T16:45:47.172Z",
+      "updatedAt": "2024-01-08T16:45:47.172Z",
+      "name_code": "OSOE2 SZOA",
+      "id": 6
+    }
+  ],
+  "document_level": [
+    {
+      "id": 1,
+      "name": "საწყისი"
+    },
+    {
+      "id": 2,
+      "name": "მაღალი"
+    },
+    {
+      "id": 3,
+      "name": "ეროვნული"
+    }
+  ],
+  "agency": [
+    {
+      "id": 1,
+      "name": "ციფრული მმართველობის სააგენტო"
+    },
+    {
+      "id": 2,
+      "name": "საჯარო რეესტრის ეროვნული სააგენტო"
+    },
+    {
+      "id": 3,
+      "name": "სახელმწიფო სერვისების განვითარების სააგენტო"
+    }
+  ]
+}
