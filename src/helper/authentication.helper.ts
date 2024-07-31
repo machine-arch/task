@@ -1,7 +1,11 @@
 import { verifyToken } from "./../util/crypto.util";
 
 class AuthenticationHelper {
-  async verifyRequest(request: Request | any, required_permission?: any) {
+  async verifyRequest(
+    request: Request | any,
+    required_permission?: any,
+    unProtected?: boolean
+  ) {
     const authHeader = request.headers.get("authorization");
 
     if (!authHeader) {
@@ -21,7 +25,7 @@ class AuthenticationHelper {
       };
     }
 
-    const result = await verifyToken(token, required_permission);
+    const result = await verifyToken(token, required_permission, unProtected);
     if (!result) {
       return {
         status: 401,
@@ -30,7 +34,6 @@ class AuthenticationHelper {
       };
     }
 
-    // Return true if the token is valid
     return {
       status: 200,
       success: true,

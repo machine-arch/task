@@ -41,7 +41,11 @@ function includesSome(a: any, b: any) {
   return b.some((element: any) => a.includes(element));
 }
 
-export const verifyToken = async (token: string, required_permission?: any) => {
+export const verifyToken = async (
+  token: string,
+  required_permission?: any,
+  unProtected?: boolean
+) => {
   try {
     const decoded: any = jwt.verify(token, secret);
 
@@ -52,36 +56,44 @@ export const verifyToken = async (token: string, required_permission?: any) => {
     }
     const role = await axiosInstance.get(`roles?id=${role_id}`);
 
+    console.log(role?.data[0]);
+
     if (!role.data[0]) {
       return null;
     }
 
     let hasPermission = false;
 
+    console.log(typeof required_permission.permission);
+
     switch (typeof required_permission.permission) {
       case "object":
+        console.log(role.data[0].permissions[required_permission.module]);
         hasPermission = includesSome(
           role.data[0].permissions[required_permission.module],
           required_permission.permission
         );
         break;
       case "string":
+        console.log(role.data[0].permissions[required_permission.module]);
         hasPermission = role.data[0].permissions[
           required_permission.module
         ].includes(required_permission.permission);
         break;
-      default:
-        hasPermission = required_permission;
+
+      case "number":
+        hasPermission = role.data[0].permissions[
+          required_permission.module
+        ].includes(required_permission.permission);
+        console.log(hasPermission, "hasPermission");
         break;
     }
 
-    console.log("hasPermission", hasPermission);
-
-    if (hasPermission) {
-      console.log("permission granted");
+    if (hasPermission || unProtected) {
+      console.table("permission granted");
       return jwt.verify(token, secret);
     } else {
-      console.log("permission denied");
+      console.table("permission denied");
       return null;
     }
   } catch (error) {

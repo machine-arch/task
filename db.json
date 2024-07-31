@@ -1,18 +1,68 @@
 {
   "users": [
     {
-      "id": 1,
       "name": "admin",
       "name_eng": "admin",
       "lastName": "admin",
       "lastName_eng": "admin",
       "agency": "admin",
       "position": "superAdmin",
-      "email": "superadmin@gmail.com",
+      "email": "superadmin1@gmail.com",
       "mobile": "123456789",
       "phone": "123456789",
       "password": "123456789",
-      "role": 1
+      "role": 1,
+      "updatedAt": "2024-07-31T16:45:24.701Z",
+      "id": 1
+    },
+    {
+      "name": "newUser",
+      "name_eng": "newUser",
+      "lastName": "newUser",
+      "lastName_eng": "newUser",
+      "agency": "newUser",
+      "position": "newUser",
+      "email": "newUser@gmail.com",
+      "mobile": "123456789",
+      "phone": "123456789",
+      "password": "$2b$10$pZ.RPakVFlokHh/5m8Vag.evpD62bcHbxfmDTP6IlQNs9WZXXSDf2",
+      "role": 1,
+      "createdAt": "2024-07-31T16:12:57.073Z",
+      "updatedAt": "2024-07-31T16:12:57.073Z",
+      "id": 2
+    },
+    {
+      "name": "newUser2",
+      "name_eng": "newUser",
+      "lastName": "newUser",
+      "lastName_eng": "newUser",
+      "agency": "newUser",
+      "position": "newUser",
+      "email": "newUser2@gmail.com",
+      "mobile": "123456789",
+      "phone": "123456789",
+      "password": "$2b$10$TjfomXiaAVwJ81oftMA7sOEQ46naG1ySs8Nkm9lNU2hTB8XxhxdRO",
+      "role": 1,
+      "createdAt": "2024-07-31T16:14:03.720Z",
+      "updatedAt": "2024-07-31T16:14:03.720Z",
+      "id": 3
+    },
+    {
+      "name": "newUser3",
+      "name_eng": "newUser",
+      "lastName": "newUser",
+      "lastName_eng": "newUser",
+      "agency": "newUser",
+      "position": "newUser",
+      "email": "newUser3@gmail.com",
+      "mobile": "123456789",
+      "phone": "123456789",
+      "password": "$2b$10$hvQTu/b3mxNz77/nrqOUiOe78qP5UqQa.v5mh2mlsLFpqbN7t1gzu",
+      "role": 2,
+      "createdAt": "2024-07-31T16:22:34.803Z",
+      "updatedAt": "2024-07-31T16:22:34.803Z",
+      "id": 4,
+      "file": "/Users/test/Documents/projects/task/public/uploads/images.jpeg"
     }
   ],
   "roles": [
@@ -21,9 +71,43 @@
       "name": "administrator",
       "description": "main",
       "permissions": {
-        "users": [1, 2, 3, 4],
-        "tabs": [1, 2, 3],
-        "roles": [1, 2, 3]
+        "users": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "tabs": [
+          1,
+          2,
+          3
+        ],
+        "roles": [
+          1,
+          2,
+          3
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "name": "administrator",
+      "description": "main",
+      "permissions": {
+        "users": [
+          1,
+          2
+        ],
+        "tabs": [
+          1,
+          2,
+          3
+        ],
+        "roles": [
+          1,
+          2,
+          3
+        ]
       }
     }
   ],
