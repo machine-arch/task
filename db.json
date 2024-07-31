@@ -3,27 +3,16 @@
     {
       "id": 1,
       "name": "admin",
+      "name_eng": "admin",
       "lastName": "admin",
+      "lastName_eng": "admin",
       "agency": "admin",
       "position": "superAdmin",
       "email": "superadmin@gmail.com",
+      "mobile": "123456789",
       "phone": "123456789",
       "password": "123456789",
       "role": 1
-    },
-    {
-      "name": "dlskdls",
-      "lastName": "dlskldksdks",
-      "agency": "dlskldksds",
-      "position": "dfdlkfldkflk",
-      "email": "dsdlsdsklds",
-      "phone": "dlskdlsklds",
-      "createdAt": "2024-01-08T17:23:37.895Z",
-      "updatedAt": "2024-01-08T17:23:37.895Z",
-      "role": "1",
-      "file": "/mnt/D/projects/senior_example/example/public/uploads/download.jpeg",
-      "password": "$2b$10$Fx4LZNirObHYSZQzJ6EH/uXogaCgLT32Eo78xlW4yH8fwrmVoXg2O",
-      "id": 2
     }
   ],
   "roles": [
@@ -32,51 +21,9 @@
       "name": "administrator",
       "description": "main",
       "permissions": {
-        "users": [
-          1,
-          2,
-          3,
-          4
-        ],
-        "tabs": [
-          1,
-          2,
-          3
-        ],
-        "roles": [
-          1,
-          2,
-          3
-        ]
-      }
-    },
-    {
-      "name": "some roleeeee",
-      "description": "test",
-      "permissions": {
-        "users": [
-          1,
-          2
-        ],
-        "tabs": [
-          1,
-          2,
-          3
-        ]
-      },
-      "updatedAt": "2024-01-08T17:27:24.779Z",
-      "id": 2
-    },
-    {
-      "id": 3,
-      "name": "user",
-      "description": "user",
-      "permissions": {
-        "users": [],
-        "tabs": [
-          2
-        ],
-        "roles": []
+        "users": [1, 2, 3, 4],
+        "tabs": [1, 2, 3],
+        "roles": [1, 2, 3]
       }
     }
   ],
@@ -155,12 +102,12 @@
   },
   "tabs": [
     {
-      "name": "test11122",
+      "name": "test",
       "name_eng": "",
       "name_code": "dsds",
       "is_active": "false",
       "document_level_id": 1,
-      "updatedAt": "2024-01-08T17:27:39.988Z",
+      "updatedAt": "2024-07-31T13:29:54.350Z",
       "id": 1
     },
     {
@@ -234,6 +181,27 @@
       "updatedAt": "2024-01-08T17:27:35.745Z",
       "name_code": "7OBEADUE4P",
       "id": 7
+    },
+    {
+      "name": "test200",
+      "name_eng": "",
+      "name_code": "U0 WEG8RSB",
+      "is_archive": "false",
+      "document_level_id": 4,
+      "valide_period": "2023-08-29 - 2023-08-30",
+      "createdAt": "2024-07-31T13:30:34.887Z",
+      "updatedAt": "2024-07-31T13:30:34.887Z",
+      "id": 8
+    },
+    {
+      "name": "test2003",
+      "name_eng": "",
+      "name_code": "SCEGWYXU3E",
+      "document_level_id": 4,
+      "valide_period": "2023-08-29 - 2023-08-30",
+      "createdAt": "2024-07-31T13:41:47.075Z",
+      "updatedAt": "2024-07-31T13:41:47.075Z",
+      "id": 9
     }
   ],
   "document_level": [

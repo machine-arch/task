@@ -10,7 +10,6 @@ export async function GET(request: Request, { params }: any) {
   const { id } = params;
   try {
     const permissions = await axiosInstance.get(`permissions`);
-    console.log(permissions.data?.users);
     const permission = permissions.data.users.filter((p: any) => p.id == id);
     if (!permission) {
       return response("No permission found", false, 404);
