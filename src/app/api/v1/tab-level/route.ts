@@ -3,7 +3,7 @@ import { axiosInstance } from "../../../../config/axios.config";
 import { response } from "@/util/response.util";
 
 export async function GET(req: Request, res: Response) {
-  const Auth = await authenticationHelper.verifyRequest(req, true);
+  const Auth = await authenticationHelper.verifyRequest(req, {}, true);
   if (!Auth.success) {
     return response(Auth.message as string, false, Auth.status, null);
   }

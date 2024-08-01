@@ -14,20 +14,28 @@ export async function GET(req: Request, res: Response) {
   try {
     const roles = await axiosInstance.get("roles");
 
+    console.log(roles.data);
+
     if (!roles.data) {
       return response("No role found", false, 404);
     }
     const permissions = await axiosInstance.get("permissions");
 
     roles.data.forEach((role: any) => {
-      role.permissions.users = permissions.data.users.filter(
-        (permission: any) => role.permissions.users.includes(permission.id)
-      );
+      role.permissions.users =
+        permissions.data.users && role.permissions.users
+          ? permissions.data.users.filter((permission: any) =>
+              role.permissions.users.includes(permission.id)
+            )
+          : [];
     });
     roles.data.forEach((role: any) => {
-      role.permissions.tabs = permissions.data.tabs.filter((permission: any) =>
-        role.permissions.tabs.includes(permission.id)
-      );
+      role.permissions.tabs =
+        permissions.data.tabs && role.permissions.tabs
+          ? permissions.data.tabs.filter((permission: any) =>
+              role.permissions.tabs.includes(permission.id)
+            )
+          : [];
     });
 
     return response("", true, 200, roles.data);

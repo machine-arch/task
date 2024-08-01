@@ -31,7 +31,7 @@ export function generateToken(user: any) {
   };
 
   const options = {
-    expiresIn: "5h",
+    expiresIn: "55h",
   };
 
   return jwt.sign(payload, secret, options);
@@ -50,6 +50,7 @@ export const verifyToken = async (
     const decoded: any = jwt.verify(token, secret);
 
     const role_id = decoded.role;
+    console.log(role_id, "role_id");
 
     if (!role_id) {
       return null;

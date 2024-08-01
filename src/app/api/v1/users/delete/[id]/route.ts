@@ -7,6 +7,7 @@ export async function DELETE(request: Request, { params }: any) {
     module: "users",
     permission: 2,
   });
+  console.log(Auth.success, "Auth");
   if (!Auth.success) {
     return response(Auth.message as string, false, Auth.status, null);
   }

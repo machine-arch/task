@@ -3,7 +3,10 @@ import { response } from "@/util/response.util";
 import { axiosInstance } from "../../../../../../config/axios.config";
 
 export async function GET(request: Request, { params }: any) {
-  const Auth = await authenticationHelper.verifyRequest(request, true);
+  const Auth = await authenticationHelper.verifyRequest(request, {
+    module: "users",
+    permission: [1, 2, 3],
+  });
   if (!Auth.success) {
     return response(Auth.message as string, false, Auth.status, null);
   }
